@@ -3,21 +3,23 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Cherif Zied | Freelance Developer</title>
+  <title>Cherif Zied | Full Stack Developer</title>
   <link rel="stylesheet" href="styles.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 <body>
+
   <nav class="navbar">
     <div class="container">
-      <a href="#" class="logo">CZ</a>
+      <a href="#" class="logo">CZ<span class="blink">_</span></a>
       <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#about">.about()</a></li>
+        <li><a href="#projects">.projects()</a></li>
+        <li><a href="#experience">.experience()</a></li>
+        <li><a href="#skills">.skills()</a></li>
+        <li><a href="#contact">.contact()</a></li>
       </ul>
       <button class="hamburger" aria-label="Menu">
         <span></span><span></span><span></span>
@@ -26,56 +28,104 @@
   </nav>
 
   <section class="hero">
+    <div id="particles"></div>
     <div class="container">
       <div class="hero-content">
-        <span class="badge">Available for freelance work</span>
-        <h1>Hi, I'm <span class="highlight">Cherif Zied</span></h1>
-        <p class="subtitle">Freelance Software Engineer</p>
-        <p class="description">
-          I build modern, high-quality digital solutions for businesses.
-          25 years old, ENIS graduate, and passionate about turning ideas into reality.
-        </p>
-        <div class="hero-actions">
-          <a href="#contact" class="btn btn-primary">Get in Touch</a>
-          <a href="#projects" class="btn btn-outline">View My Work</a>
+        <div class="typing-wrapper">
+          <span class="typing-line">$ <span class="typing-text">whoami</span></span>
         </div>
-        <div class="social-links">
-          <a href="mailto:cherifzied@email.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
-          <a href="https://github.com/cherifzied" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
-          <a href="https://linkedin.com/in/cherifzied" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <div class="hero-main">
+          <span class="badge">// Available for freelance work</span>
+          <h1><span class="hl-1">&lt;</span> Cherif Zied <span class="hl-1">/&gt;</span></h1>
+          <p class="subtitle"><span class="hl-2">Full Stack</span> Developer <span class="hl-3">&</span> <span class="hl-2">QA</span> Engineer</p>
+          <p class="description">
+            ENIS graduate &bull; 25 years old &bull; Building robust web solutions 
+            with modern tech stacks. From microservices to pixel-perfect UIs — 
+            I turn complex problems into elegant software.
+          </p>
+          <div class="hero-stats">
+            <div class="stat">
+              <span class="stat-num">2+</span>
+              <span class="stat-label">Clients Served</span>
+            </div>
+            <div class="stat">
+              <span class="stat-num">5+</span>
+              <span class="stat-label">Projects Built</span>
+            </div>
+            <div class="stat">
+              <span class="stat-num">6</span>
+              <span class="stat-label">Months @ KPIT</span>
+            </div>
+          </div>
+          <div class="hero-actions">
+            <a href="#contact" class="btn btn-primary">Hire Me <i class="fas fa-arrow-right"></i></a>
+            <a href="#projects" class="btn btn-outline">View Work <i class="fas fa-code"></i></a>
+            <a href="resume.pdf" class="btn btn-ghost"><i class="fas fa-download"></i> Resume</a>
+          </div>
+          <div class="social-links">
+            <a href="mailto:ziedcherif173@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+            <a href="https://github.com/ziedcherif782001" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://linkedin.com/in/ziedcherif782001" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="hero-bg-shapes">
-      <div class="shape shape-1"></div>
-      <div class="shape shape-2"></div>
-      <div class="shape shape-3"></div>
     </div>
   </section>
 
   <section id="about" class="about">
     <div class="container">
-      <h2 class="section-title">About Me</h2>
-      <div class="about-grid">
-        <div class="about-card">
-          <i class="fas fa-graduation-cap"></i>
-          <h3>Education</h3>
-          <p>Graduated from <strong>ENIS</strong> (École Nationale d'Ingénieurs de Sfax) — June 2025</p>
+      <div class="section-header">
+        <span class="section-number">01.</span>
+        <h2 class="section-title">About Me</h2>
+      </div>
+      <div class="about-wrapper">
+        <div class="about-text">
+          <p>
+            I'm a 25-year-old <strong>Full Stack Developer</strong> and recent <strong>ENIS</strong> graduate 
+            (Class of 2025) based in Tunisia. My journey started with a 6-month QA Engineering internship 
+            at <strong>KPIT Tunisia</strong>, where I developed an eye for quality and a deep appreciation 
+            for clean, testable code.
+          </p>
+          <p>
+            Today, I'm freelancing full-time — building everything from veterinary management platforms 
+            to elegant e-commerce stores for local businesses. I work across the full stack with 
+            <strong>Angular</strong>, <strong>Spring Boot</strong>, and <strong>PostgreSQL</strong>, 
+            and I'm always exploring microservices, real-time systems, and CI/CD pipelines.
+          </p>
+          <div class="about-highlights">
+            <div><i class="fas fa-check-circle"></i> ENIS Engineering Graduate — 2025</div>
+            <div><i class="fas fa-check-circle"></i> QA Engineer @ KPIT Tunisia — 6 Months</div>
+            <div><i class="fas fa-check-circle"></i> Freelance Developer — 2 Clients & Counting</div>
+            <div><i class="fas fa-check-circle"></i> Full Stack: Angular + Spring Boot + PostgreSQL</div>
+          </div>
         </div>
-        <div class="about-card">
-          <i class="fas fa-briefcase"></i>
-          <h3>Experience</h3>
-          <p>6-month internship as a <strong>QA Engineer</strong> at <strong>KPIT Tunisia</strong></p>
-        </div>
-        <div class="about-card">
-          <i class="fas fa-laptop-code"></i>
-          <h3>Freelance</h3>
-          <p>Currently building web solutions for clients — delivered 2 projects so far</p>
-        </div>
-        <div class="about-card">
-          <i class="fas fa-user"></i>
-          <h3>Who I Am</h3>
-          <p>25 years old, self-driven, and dedicated to delivering high-quality software that makes a real impact.</p>
+        <div class="about-code">
+          <div class="code-block">
+            <div class="code-header">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green"></span>
+              <span class="code-title">profile.json</span>
+            </div>
+            <pre><code>{
+  <span class="key">"name"</span>: <span class="str">"Cherif Zied"</span>,
+  <span class="key">"age"</span>: <span class="num">25</span>,
+  <span class="key">"location"</span>: <span class="str">"Tunisia"</span>,
+  <span class="key">"education"</span>: {
+    <span class="key">"school"</span>: <span class="str">"ENIS"</span>,
+    <span class="key">"year"</span>: <span class="str">"2025"</span>
+  },
+  <span class="key">"experience"</span>: [
+    {
+      <span class="key">"role"</span>: <span class="str">"QA Engineer"</span>,
+      <span class="key">"company"</span>: <span class="str">"KPIT Tunisia"</span>,
+      <span class="key">"duration"</span>: <span class="str">"6 months"</span>
+    }
+  ],
+  <span class="key">"status"</span>: <span class="str">"Freelance"</span>,
+  <span class="key">"stack"</span>: [<span class="str">"Angular"</span>, <span class="str">"Spring Boot"</span>, <span class="str">"PostgreSQL"</span>]
+}</code></pre>
+          </div>
         </div>
       </div>
     </div>
@@ -83,26 +133,199 @@
 
   <section id="projects" class="projects">
     <div class="container">
-      <h2 class="section-title">My Projects</h2>
+      <div class="section-header">
+        <span class="section-number">02.</span>
+        <h2 class="section-title">Selected Projects</h2>
+      </div>
+      <div class="project-filters">
+        <span class="filter-label">Feb 2025 – Present &bull; Tunisia</span>
+      </div>
       <div class="projects-grid">
-        <div class="project-card">
-          <div class="project-icon"><i class="fas fa-paw"></i></div>
+
+        <div class="project-card featured">
+          <div class="project-badge">Freelance</div>
+          <div class="project-card-top">
+            <div class="project-icon"><i class="fas fa-paw"></i></div>
+            <div class="project-links">
+              <a href="#" title="Live Demo"><i class="fas fa-external-link-alt"></i></a>
+              <a href="#" title="Source Code"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
           <h3>Bahvet</h3>
-          <p class="project-client">Veterinary practice management</p>
-          <p>A full-featured platform built for a vet to manage appointments, patient records, and clinic operations.</p>
+          <p class="project-sub">Veterinary Practice Management Platform</p>
+          <p class="project-desc">
+            A full-featured platform for a local vet to manage appointments, patient medical records, 
+            client communications, and daily clinic operations. Built from the ground up as a 
+            responsive single-page application with a robust backend.
+          </p>
+          <ul class="project-features">
+            <li>Appointment scheduling & calendar view</li>
+            <li>Patient medical history tracking</li>
+            <li>Client management & notifications</li>
+            <li>Dashboard with clinic analytics</li>
+          </ul>
           <div class="project-tags">
-            <span>Web App</span>
-            <span>Management</span>
+            <span>Angular</span>
+            <span>Spring Boot</span>
+            <span>PostgreSQL</span>
+            <span>REST APIs</span>
           </div>
         </div>
-        <div class="project-card">
-          <div class="project-icon"><i class="fas fa-gem"></i></div>
+
+        <div class="project-card featured">
+          <div class="project-badge">Freelance</div>
+          <div class="project-card-top">
+            <div class="project-icon"><i class="fas fa-gem"></i></div>
+            <div class="project-links">
+              <a href="#" title="Live Demo"><i class="fas fa-external-link-alt"></i></a>
+              <a href="#" title="Source Code"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
           <h3>Hadir Jewlry</h3>
-          <p class="project-client">Online jewelry store</p>
-          <p>An elegant e-commerce solution for a jewelry maker with product catalog, shopping cart, and checkout.</p>
+          <p class="project-sub">Online Jewelry E-Commerce Store</p>
+          <p class="project-desc">
+            An elegant and fully-responsive e-commerce solution for a jewelry artisan. 
+            Features a product catalog with high-res imagery, a seamless shopping cart 
+            experience, and a streamlined checkout flow.
+          </p>
+          <ul class="project-features">
+            <li>Product catalog with categories & search</li>
+            <li>Shopping cart & wishlist functionality</li>
+            <li>Order management & status tracking</li>
+            <li>Mobile-first responsive design</li>
+          </ul>
           <div class="project-tags">
-            <span>E-commerce</span>
-            <span>Full Stack</span>
+            <span>Angular</span>
+            <span>Spring Boot</span>
+            <span>PostgreSQL</span>
+            <span>Docker</span>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="section-sub-header">
+        <span class="section-number">03.</span>
+        <h2 class="section-title">Academic & Personal Projects</h2>
+      </div>
+      <div class="project-filters">
+        <span class="filter-label">Jul 2024 – Aug 2024 &bull; Tunisia</span>
+      </div>
+      <div class="projects-grid">
+
+        <div class="project-card">
+          <div class="project-card-top">
+            <div class="project-icon"><i class="fas fa-layer-group"></i></div>
+          </div>
+          <h3>Full Stack Web Application</h3>
+          <p class="project-sub">Angular + Spring Boot</p>
+          <p class="project-desc">
+            Developed a full stack web application using Angular and Spring Boot with 
+            RESTful APIs, JWT-based authentication, and PostgreSQL database integration. 
+            Used Git for version control and Docker for containerized deployment.
+          </p>
+          <div class="project-tags">
+            <span>Angular</span>
+            <span>Spring Boot</span>
+            <span>PostgreSQL</span>
+            <span>Docker</span>
+            <span>JWT</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-card-top">
+            <div class="project-icon"><i class="fas fa-chart-line"></i></div>
+          </div>
+          <h3>Real-Time Monitoring Dashboard</h3>
+          <p class="project-sub">Data Visualization & Processing</p>
+          <p class="project-desc">
+            Designed a responsive dashboard for real-time data visualization with HTML, CSS, 
+            JavaScript, and Angular on the frontend. Built backend services for data 
+            processing, WebSocket communication, and live updates.
+          </p>
+          <div class="project-tags">
+            <span>Angular</span>
+            <span>JavaScript</span>
+            <span>WebSocket</span>
+            <span>REST APIs</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-card-top">
+            <div class="project-icon"><i class="fas fa-cubes"></i></div>
+          </div>
+          <h3>Microservices Learning Project</h3>
+          <p class="project-sub">Modular Backend Architecture</p>
+          <p class="project-desc">
+            Built modular backend services using Spring Boot and REST APIs. Explored 
+            Docker Compose for multi-container orchestration and implemented inter-service 
+            communication patterns including synchronous REST and message-based.
+          </p>
+          <div class="project-tags">
+            <span>Spring Boot</span>
+            <span>Microservices</span>
+            <span>Docker Compose</span>
+            <span>REST APIs</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="experience" class="experience">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-number">04.</span>
+        <h2 class="section-title">Experience</h2>
+      </div>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-date">Feb 2025 – Present</span>
+            <h3>Freelance Full Stack Developer</h3>
+            <span class="timeline-company">Self-Employed &bull; Tunisia</span>
+            <p>
+              Building end-to-end web solutions for local businesses. Delivered 2 production 
+              applications including a veterinary management platform and an e-commerce store. 
+              Stack: Angular, Spring Boot, PostgreSQL, Docker.
+            </p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-date">Jul 2024 – Aug 2024</span>
+            <h3>Full Stack Web Application Project</h3>
+            <span class="timeline-company">Academic Project &bull; Tunisia</span>
+            <p>
+              Developed a full stack app with Angular and Spring Boot featuring REST APIs, 
+              JWT authentication, PostgreSQL integration, and Docker containerization.
+            </p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-date">2024</span>
+            <h3>QA Engineering Intern</h3>
+            <span class="timeline-company">KPIT Tunisia &bull; 6 Months</span>
+            <p>
+              Gained hands-on experience in software testing, API testing, debugging, 
+              test automation, and working within Agile/Scrum teams using Jira.
+            </p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-date">2021 – 2025</span>
+            <h3>Engineering Degree</h3>
+            <span class="timeline-company">ENIS &bull; École Nationale d'Ingénieurs de Sfax</span>
+            <p>Graduated with a degree in Engineering — June 2025.</p>
           </div>
         </div>
       </div>
@@ -111,55 +334,74 @@
 
   <section id="skills" class="skills">
     <div class="container">
-      <h2 class="section-title">Skills</h2>
-      <div class="skills-grid">
-        <div class="skill-category">
-          <h3><i class="fas fa-code"></i> Frontend</h3>
-          <ul>
-            <li>HTML / CSS / JavaScript</li>
-            <li>React</li>
-            <li>Responsive Design</li>
-          </ul>
-        </div>
-        <div class="skill-category">
+      <div class="section-header">
+        <span class="section-number">05.</span>
+        <h2 class="section-title">Technical Arsenal</h2>
+      </div>
+      <div class="skills-wrapper">
+        <div class="skill-group">
           <h3><i class="fas fa-server"></i> Backend</h3>
-          <ul>
-            <li>Node.js</li>
-            <li>Express</li>
-            <li>REST APIs</li>
-          </ul>
+          <div class="skill-tags">
+            <span>Java</span>
+            <span>Spring Boot</span>
+            <span>REST APIs</span>
+            <span>WebSocket</span>
+            <span>Microservices</span>
+          </div>
         </div>
-        <div class="skill-category">
-          <h3><i class="fas fa-database"></i> Database</h3>
-          <ul>
-            <li>PostgreSQL</li>
-            <li>MongoDB</li>
-            <li>Firebase</li>
-          </ul>
+        <div class="skill-group">
+          <h3><i class="fas fa-palette"></i> Frontend</h3>
+          <div class="skill-tags">
+            <span>Angular</span>
+            <span>HTML5</span>
+            <span>CSS3</span>
+            <span>JavaScript</span>
+          </div>
         </div>
-        <div class="skill-category">
-          <h3><i class="fas fa-tools"></i> Tools</h3>
-          <ul>
-            <li>Git / GitHub</li>
-            <li>Docker</li>
-            <li>Vercel / Railway</li>
-          </ul>
+        <div class="skill-group">
+          <h3><i class="fas fa-database"></i> Databases</h3>
+          <div class="skill-tags">
+            <span>PostgreSQL</span>
+            <span>SQL</span>
+          </div>
         </div>
-        <div class="skill-category">
-          <h3><i class="fas fa-flask"></i> QA</h3>
-          <ul>
-            <li>Manual Testing</li>
-            <li>Automation (Selenium)</li>
-            <li>CI/CD Pipelines</li>
-          </ul>
+        <div class="skill-group">
+          <h3><i class="fas fa-tools"></i> DevOps & Tools</h3>
+          <div class="skill-tags">
+            <span>Docker</span>
+            <span>Docker Compose</span>
+            <span>Git</span>
+            <span>GitHub</span>
+            <span>GitLab</span>
+            <span>Jenkins</span>
+          </div>
         </div>
-        <div class="skill-category">
-          <h3><i class="fas fa-rocket"></i> Deployment</h3>
-          <ul>
-            <li>Vercel</li>
-            <li>Railway</li>
-            <li>Netlify</li>
-          </ul>
+        <div class="skill-group">
+          <h3><i class="fas fa-code"></i> Languages</h3>
+          <div class="skill-tags">
+            <span>Java</span>
+            <span>Python</span>
+            <span>C</span>
+            <span>Bash</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <h3><i class="fas fa-sync-alt"></i> Methodologies</h3>
+          <div class="skill-tags">
+            <span>Agile</span>
+            <span>Scrum</span>
+            <span>CI/CD</span>
+            <span>Problem Solving</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <h3><i class="fas fa-bug"></i> Testing & QA</h3>
+          <div class="skill-tags">
+            <span>API Testing</span>
+            <span>Debugging</span>
+            <span>Test Automation</span>
+            <span>Jira</span>
+          </div>
         </div>
       </div>
     </div>
@@ -167,23 +409,42 @@
 
   <section id="contact" class="contact">
     <div class="container">
-      <h2 class="section-title">Get In Touch</h2>
-      <p class="contact-subtitle">I'm currently available for freelance work. Let's build something great together.</p>
-      <div class="contact-content">
-        <a href="mailto:cherifzied@email.com" class="contact-card">
-          <i class="fas fa-envelope"></i>
-          <h3>Email</h3>
-          <p>cherifzied@email.com</p>
+      <div class="section-header">
+        <span class="section-number">06.</span>
+        <h2 class="section-title">Let's Build Together</h2>
+      </div>
+      <p class="contact-subtitle">
+        I'm currently available for freelance projects, collaborations, 
+        or full-time opportunities. Let's turn your idea into reality.
+      </p>
+      <div class="contact-grid">
+        <a href="mailto:ziedcherif173@gmail.com" class="contact-card">
+          <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+          <div>
+            <h3>Email</h3>
+            <p>ziedcherif173@gmail.com</p>
+          </div>
         </a>
-        <a href="https://linkedin.com/in/cherifzied" target="_blank" class="contact-card">
-          <i class="fab fa-linkedin-in"></i>
-          <h3>LinkedIn</h3>
-          <p>Connect with me</p>
+        <a href="tel:+21628785449" class="contact-card">
+          <div class="contact-icon"><i class="fas fa-phone-alt"></i></div>
+          <div>
+            <h3>Phone</h3>
+            <p>+216 28 785 449</p>
+          </div>
         </a>
-        <a href="https://github.com/cherifzied" target="_blank" class="contact-card">
-          <i class="fab fa-github"></i>
-          <h3>GitHub</h3>
-          <p>Check my repos</p>
+        <a href="https://github.com/ziedcherif782001" target="_blank" class="contact-card">
+          <div class="contact-icon"><i class="fab fa-github"></i></div>
+          <div>
+            <h3>GitHub</h3>
+            <p>ziedcherif782001</p>
+          </div>
+        </a>
+        <a href="https://linkedin.com/in/ziedcherif782001" target="_blank" class="contact-card">
+          <div class="contact-icon"><i class="fab fa-linkedin-in"></i></div>
+          <div>
+            <h3>LinkedIn</h3>
+            <p>Connect with me</p>
+          </div>
         </a>
       </div>
     </div>
@@ -191,7 +452,15 @@
 
   <footer class="footer">
     <div class="container">
-      <p>&copy; 2026 Cherif Zied. All rights reserved.</p>
+      <div class="footer-content">
+        <a href="#" class="logo">CZ<span class="blink">_</span></a>
+        <p>&copy; 2026 Cherif Zied &bull; Built with <i class="fas fa-heart" style="color: var(--accent);"></i> in Tunisia</p>
+        <div class="footer-links">
+          <a href="mailto:ziedcherif173@gmail.com"><i class="fas fa-envelope"></i></a>
+          <a href="https://github.com/ziedcherif782001" target="_blank"><i class="fab fa-github"></i></a>
+          <a href="https://linkedin.com/in/ziedcherif782001" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
     </div>
   </footer>
 

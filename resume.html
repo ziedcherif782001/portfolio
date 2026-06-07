@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Zied Cherif — Resume</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #f5f7fa;
+      color: #1a1a2e;
+      line-height: 1.6;
+      padding: 40px 20px;
+    }
+    .resume {
+      max-width: 850px;
+      margin: 0 auto;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+      overflow: hidden;
+    }
+    .header {
+      background: linear-gradient(135deg, #1a1a2e, #16213e);
+      color: #fff;
+      padding: 40px 48px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .header-left h1 {
+      font-size: 2rem;
+      font-weight: 800;
+      letter-spacing: -1px;
+      margin-bottom: 4px;
+    }
+    .header-left .title {
+      font-size: 1rem;
+      color: #64ffda;
+      font-weight: 500;
+    }
+    .header-right {
+      text-align: right;
+      font-size: 0.85rem;
+      color: #a0aec0;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .header-right a {
+      color: #a0aec0;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .header-right a:hover { color: #64ffda; }
+    .header-right i { width: 18px; color: #64ffda; }
+    .body { padding: 40px 48px; }
+    .section {
+      margin-bottom: 32px;
+    }
+    .section-title {
+      font-size: 1rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: #1a1a2e;
+      border-bottom: 2px solid #1a1a2e;
+      padding-bottom: 8px;
+      margin-bottom: 16px;
+    }
+    .section-title i { margin-right: 10px; color: #16213e; }
+    .edu-item, .exp-item {
+      margin-bottom: 20px;
+    }
+    .edu-item:last-child, .exp-item:last-child { margin-bottom: 0; }
+    .item-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 4px;
+    }
+    .item-header h3 {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: #1a1a2e;
+    }
+    .item-header .date {
+      font-size: 0.8rem;
+      color: #718096;
+      font-weight: 500;
+      white-space: nowrap;
+    }
+    .item-sub {
+      font-size: 0.85rem;
+      color: #4a5568;
+      font-weight: 500;
+      margin-bottom: 6px;
+    }
+    .item-desc {
+      font-size: 0.85rem;
+      color: #4a5568;
+      line-height: 1.6;
+    }
+    ul.item-desc {
+      padding-left: 20px;
+      list-style: none;
+    }
+    ul.item-desc li {
+      position: relative;
+      padding-left: 16px;
+      margin-bottom: 4px;
+    }
+    ul.item-desc li::before {
+      content: '–';
+      position: absolute;
+      left: 0;
+      color: #16213e;
+    }
+    .skills-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px 24px;
+    }
+    .skill-row {
+      display: flex;
+      gap: 8px;
+      font-size: 0.85rem;
+    }
+    .skill-row strong {
+      min-width: 150px;
+      color: #1a1a2e;
+      font-weight: 600;
+    }
+    .skill-row span {
+      color: #4a5568;
+    }
+    .lang-item, .act-item {
+      display: inline-block;
+      background: #f0f4f8;
+      padding: 6px 16px;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      margin: 0 8px 8px 0;
+      color: #1a1a2e;
+    }
+    .lang-item strong { color: #16213e; }
+    .footer-note {
+      text-align: center;
+      font-size: 0.75rem;
+      color: #a0aec0;
+      margin-top: 24px;
+      padding: 16px;
+    }
+    .print-btn {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+    .print-btn button {
+      background: #1a1a2e;
+      color: #fff;
+      border: none;
+      padding: 12px 32px;
+      border-radius: 8px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.2s;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .print-btn button:hover { background: #16213e; }
+    @media print {
+      body { padding: 0; background: #fff; }
+      .resume { box-shadow: none; border-radius: 0; }
+      .print-btn { display: none; }
+      .header { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    }
+    @media (max-width: 600px) {
+      .header { flex-direction: column; padding: 24px; }
+      .header-right { text-align: left; }
+      .body { padding: 24px; }
+      .skills-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <div class="print-btn">
+    <button onclick="window.print()"><i class="fas fa-download"></i> Download PDF (Print → Save as PDF)</button>
+  </div>
+  <div class="resume">
+    <div class="header">
+      <div class="header-left">
+        <h1>Zied Cherif</h1>
+        <div class="title">Junior Full Stack Developer</div>
+      </div>
+      <div class="header-right">
+        <span><i class="fas fa-phone-alt"></i> +216 28 785 449</span>
+        <span><i class="fas fa-envelope"></i> ziedcherif5295@gmail.com</span>
+        <span><i class="fab fa-linkedin-in"></i> <a href="https://linkedin.com/in/zied-cherif-9ab459409">zied-cherif-9ab459409</a></span>
+        <span><i class="fas fa-calendar-alt"></i> Date of Birth: 08 Jul 2001</span>
+      </div>
+    </div>
+
+    <div class="body">
+
+      <div class="section">
+        <div class="section-title"><i class="fas fa-graduation-cap"></i> Education</div>
+
+        <div class="edu-item">
+          <div class="item-header">
+            <h3>Preparatory Institute for Engineering Studies of Sfax (IPEIS)</h3>
+            <span class="date">Sep 2020 – Jun 2022</span>
+          </div>
+          <div class="item-sub">Preparatory Cycle in Mathematics & Physics &bull; Sfax, Tunisia</div>
+        </div>
+
+        <div class="edu-item">
+          <div class="item-header">
+            <h3>National Engineering School of Sfax (ENIS)</h3>
+            <span class="date">Sep 2022 – Jun 2025</span>
+          </div>
+          <div class="item-sub">Engineering Degree in Software Engineering — Embedded Systems & Industrial Computing &bull; Sfax, Tunisia</div>
+          <div class="item-desc">Focused on Software Development, Web Technologies, Databases, APIs, Embedded Systems, and Software Engineering Principles.</div>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-title"><i class="fas fa-briefcase"></i> Professional Experience</div>
+
+        <div class="exp-item">
+          <div class="item-header">
+            <h3>Automotive ECU Test & Validation Engineer</h3>
+            <span class="date">Feb 2025 – Present</span>
+          </div>
+          <div class="item-sub">KPIT Engineering Tunisia &bull; Tunis</div>
+          <ul class="item-desc">
+            <li>Developed and maintained automation scripts using Python and Git-based workflows</li>
+            <li>Collaborated within Agile teams to manage tasks, defects, and validation activities using Jira</li>
+            <li>Participated in debugging, issue tracking, and technical analysis for embedded software systems</li>
+          </ul>
+        </div>
+
+        <div class="exp-item">
+          <div class="item-header">
+            <h3>Embedded Systems Intern</h3>
+            <span class="date">Jul 2024 – Aug 2024</span>
+          </div>
+          <div class="item-sub">Hydatis &bull; Tunis</div>
+          <ul class="item-desc">
+            <li>Developed an IoT-based dashboard for real-time monitoring and visualization</li>
+            <li>Integrated backend data acquisition with frontend visualization components</li>
+            <li>Worked with APIs and sensor data processing for live system monitoring</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-title"><i class="fas fa-code"></i> Selected Projects</div>
+
+        <div class="exp-item">
+          <div class="item-header">
+            <h3>Full Stack Web Application</h3>
+            <span class="date">2024</span>
+          </div>
+          <ul class="item-desc">
+            <li>Developed a full stack web application using Angular and Spring Boot</li>
+            <li>Implemented RESTful APIs, authentication, and database integration with PostgreSQL</li>
+            <li>Used Git and Docker for version control and containerized deployment</li>
+          </ul>
+        </div>
+
+        <div class="exp-item">
+          <div class="item-header">
+            <h3>Real-Time Monitoring Dashboard</h3>
+            <span class="date">2024</span>
+          </div>
+          <ul class="item-desc">
+            <li>Designed a responsive dashboard for real-time data visualization</li>
+            <li>Built frontend interfaces using HTML, CSS, JavaScript, and Angular</li>
+            <li>Developed backend services for data processing and communication</li>
+          </ul>
+        </div>
+
+        <div class="exp-item">
+          <div class="item-header">
+            <h3>Microservices Learning Project</h3>
+            <span class="date">2024</span>
+          </div>
+          <ul class="item-desc">
+            <li>Built modular backend services using Spring Boot and REST APIs</li>
+            <li>Explored Docker Compose and service communication concepts</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-title"><i class="fas fa-wrench"></i> Technical Skills</div>
+        <div class="skills-grid">
+          <div class="skill-row"><strong>Backend Development:</strong> <span>Java, Spring Boot, REST APIs, WebSocket, Microservices</span></div>
+          <div class="skill-row"><strong>Frontend Development:</strong> <span>Angular, HTML, CSS, JavaScript</span></div>
+          <div class="skill-row"><strong>Databases:</strong> <span>PostgreSQL, SQL</span></div>
+          <div class="skill-row"><strong>DevOps & Tools:</strong> <span>Docker, Docker Compose, Git, GitHub, GitLab, Jenkins</span></div>
+          <div class="skill-row"><strong>Programming:</strong> <span>Java, Python, C, Bash</span></div>
+          <div class="skill-row"><strong>Methodologies:</strong> <span>Agile, Scrum, CI/CD Basics, Problem Solving</span></div>
+          <div class="skill-row"><strong>Testing & Debugging:</strong> <span>API Testing, Debugging, Test Automation, Jira</span></div>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-title"><i class="fas fa-globe"></i> Languages</div>
+        <div>
+          <span class="lang-item"><strong>Arabic</strong> — Native</span>
+          <span class="lang-item"><strong>French</strong> — Fluent</span>
+          <span class="lang-item"><strong>English</strong> — Professional</span>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-title"><i class="fas fa-heart"></i> Activities & Interests</div>
+        <div>
+          <span class="act-item"><i class="fas fa-flag-checkered"></i> Formula 1</span>
+          <span class="act-item"><i class="fas fa-table-tennis"></i> Tennis</span>
+          <span class="act-item"><i class="fas fa-futbol"></i> Football</span>
+          <span class="act-item"><i class="fas fa-dumbbell"></i> Weekly Sports Practice</span>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="footer-note">
+      <i class="fas fa-print"></i> Use Print → Save as PDF to download this resume
+    </div>
+  </div>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      document.querySelector('.print-btn button').addEventListener('click', () => window.print());
+    });
+  </script>
+</body>
+</html>
